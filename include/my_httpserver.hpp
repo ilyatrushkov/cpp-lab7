@@ -1,7 +1,7 @@
 // Copyright 2022 Trushkov Ilya ilya.tr20002@gmail.com
 
-#ifndef TEMPLATE_MY_HTTPSERVER_HPP
-#define TEMPLATE_MY_HTTPSERVER_HPP
+#ifndef INCLUDE_MY_HTTPSERVER_HPP_
+#define INCLUDE_MY_HTTPSERVER_HPP_
 #include <boost/beast/core.hpp>
 #include <boost/beast/http.hpp>
 #include <boost/beast/version.hpp>
@@ -13,6 +13,7 @@
 #include <string>
 #include <thread>
 #include <mutex>
+#include <utility>
 #include <nlohmann/json.hpp>
 
 #include "Suggestions.hpp"
@@ -101,7 +102,7 @@ void handle_request(const std::shared_ptr<std::timed_mutex> &mutex,
 //+++++++
 
   // Respond to HEAD request
-  if(req.method() == http::verb::head) {
+  if (req.method() == http::verb::head) {
     http::response<http::empty_body> res{http::status::ok, req.version()};
     res.set(http::field::server, BOOST_BEAST_VERSION_STRING);
     res.set(http::field::content_type, "application/json");
@@ -158,4 +159,4 @@ void do_session(boost::asio::ip::tcp::socket& socket,
 
 int server_working(int argc, char *argv[]);
 
-#endif  // TEMPLATE_MY_HTTPSERVER_HPP
+#endif  // INCLUDE_MY_HTTPSERVER_HPP_

@@ -1,7 +1,7 @@
 // Copyright 2022 Trushkov Ilya ilya.tr20002@gmail.com
 
-#ifndef TEMPLATE_SUGGESTIONS_HPP
-#define TEMPLATE_SUGGESTIONS_HPP
+#ifndef INCLUDE_SUGGESTIONS_HPP_
+#define INCLUDE_SUGGESTIONS_HPP_
 
 #include <string>
 #include <nlohmann/json.hpp>
@@ -16,4 +16,4 @@ class Suggestions {
   nlohmann::json suggest(const std::string &input);
 };
 
-#endif  // TEMPLATE_SUGGESTIONS_HPP
+#endif  // INCLUDE_SUGGESTIONS_HPP_

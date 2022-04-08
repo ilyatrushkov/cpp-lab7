@@ -40,7 +40,7 @@ int server_working(int argc, char *argv[]) {
   std::shared_ptr<std::timed_mutex> mutex =
       std::make_shared<std::timed_mutex>();
   std::shared_ptr<Storage> storage = std::make_shared<Storage>(
-      "/home/ikarugao/Desktop/Study/C++LABS/MY/7/lab-07-http-server-master/suggestions.json");
+      "./suggestions.json");
   std::shared_ptr<Suggestions> suggestions =
       std::make_shared<Suggestions>();
   try {

@@ -1,7 +1,7 @@
 // Copyright 2022 Trushkov Ilya ilya.tr20002@gmail.com
 
-#ifndef TEMPLATE_STORAGE_HPP
-#define TEMPLATE_STORAGE_HPP
+#ifndef INCLUDE_STORAGE_HPP_
+#define INCLUDE_STORAGE_HPP_
 
 #include <string>
 #include <nlohmann/json.hpp>
@@ -16,4 +16,4 @@ class Storage {
   nlohmann::json get_storage();
 };
 
-#endif  // TEMPLATE_STORAGE_HPP
+#endif  // INCLUDE_STORAGE_HPP_

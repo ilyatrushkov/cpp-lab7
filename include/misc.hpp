@@ -1,7 +1,7 @@
 // Copyright 2022 Trushkov Ilya ilya.tr20002@gmail.com
 
-#ifndef TEMPLATE_MISC_HPP
-#define TEMPLATE_MISC_HPP
+#ifndef INCLUDE_MISC_HPP_
+#define INCLUDE_MISC_HPP_
 
 #include <string>
 #include <iostream>
@@ -9,6 +9,7 @@
 #include <iomanip>
 #include <mutex>
 #include <thread>
+#include <memory>
 #include <nlohmann/json.hpp>
 
 #include "Storage.hpp"
@@ -20,4 +21,4 @@ void suggestion_updater(const std::shared_ptr<Storage> &storage,
     const std::shared_ptr<Suggestions> &suggestions,
     const std::shared_ptr<std::timed_mutex> &mutex);
 
-#endif  // TEMPLATE_MISC_HPP
+#endif  // INCLUDE_MISC_HPP_
