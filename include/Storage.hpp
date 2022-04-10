@@ -12,7 +12,7 @@ class Storage {
   nlohmann::json _storage;
 
  public:
-  explicit Storage(const std::string filename);
+  explicit Storage(const std::string &filename);
   nlohmann::json get_storage();
 };
 
